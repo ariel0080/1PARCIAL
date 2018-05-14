@@ -29,6 +29,7 @@ void Mod_Tarj_Cre (EProp lisProp[]);
 void BajaProp (EProp lisProp[], EAuto lisAuto[]);
 void IngresoAuto(EAuto listAuto[]);
 void EgresoAuto(EAuto listAuto[],EProp lisProp[]);
+int
 
 
 

@@ -13,3 +13,17 @@
 	<stdlib.h>
 	"funciones.h"
 
+1525704304 source:c:\users\administrador\desktop\1-parcial\funciones.c
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	"funciones.h"
+	<string.h>
+
+1525704304 c:\users\administrador\desktop\1-parcial\funciones.h
+
+1526255238 source:c:\users\administrador\desktop\1-parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+

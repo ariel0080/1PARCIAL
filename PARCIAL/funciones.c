@@ -7,6 +7,7 @@
 #define FERRARI 2
 #define AUDI 3
 #define OTRO 4
+#define T_AUTOS 20
 
 
 int devolverHorasEstadia()
@@ -25,10 +26,10 @@ int obtenerEspacioLibre(EProp lisProp[])
 {
 
     int i=0;
-    while (lisProp[i].estado == 1 && i<20)
+    while (lisProp[i].estado == 1 && i<T_AUTOS)
         {
             i++;
-            if (i==20){return -1;}
+            if (i==T_AUTOS){return -1;}
         }
     return i;
 
@@ -48,19 +49,20 @@ void AltaPropietario(EProp lisProp[])
     else
     {
         lisProp[indice].idPropietario = indice+100;
-        lisProp[indice].estado =1;
 
         printf("\nIngrese nombre: ");
         fgets(dato,100,stdin);
         strcpy(lisProp[indice].nom_ape,dato);
 
-        printf("\Ingrese direccion: ");
+        printf("\nIngrese direccion: ");
         fgets(dato,100,stdin);
         strcpy(lisProp[indice].direc,dato);
 
-        printf("\Ingrese n° tarjeta de credito: ");
+        printf("\nIngrese n%c tarjeta de credito: ",167);
         fgets(dato,100,stdin);
         strcpy(lisProp[indice].tarjCred,dato);
+
+        lisProp[indice].estado =1;
     }
 
 }
@@ -108,7 +110,7 @@ void BajaProp (EProp lisProp[] ,EAuto lisAuto[])
         a++;
     }
 
-    if(a==20){printf("\nNo existe la persona ingresada");}
+    if(a==20){printf("\nNo existe la persona ingresada\n\n");system("pause");}
 
     else
     {
