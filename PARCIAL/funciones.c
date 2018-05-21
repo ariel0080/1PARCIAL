@@ -682,7 +682,7 @@ void ListadoOrdenadoAutos(EProp lisProp[], EAuto lisAuto[])
           printf("Patente: %s\tMarca: %s\tID: %d\n",lisAuto[j].patente,marca_letras,lisAuto[j].idPropietario);
           for(int jj=0;jj<T_CLIENTES;jj++)
           {
-              if(lisProp[jj].idPropietario=lisAuto[j].idPropietario){printf("Propietario: %s",lisProp[jj].nom_ape);}
+              if(lisProp[jj].idPropietario==lisAuto[j].idPropietario){printf("Propietario: %s",lisProp[jj].nom_ape);}
           }
       }
 

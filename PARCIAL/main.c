@@ -9,8 +9,8 @@ int main()
 
      inicilizar_Prop(lisProp);
      inicializar_Autos(lisAuto);
-     //HardCode_Prop(lisProp);
-     //HardCode_Autos(lisAuto);
+     HardCode_Prop(lisProp);
+     HardCode_Autos(lisAuto);
      char dato[100];
      char opcion;
      char seguir='s';
