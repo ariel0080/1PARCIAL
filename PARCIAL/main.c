@@ -4,9 +4,13 @@
 
 int main()
 {
-     EProp lisProp[20];
-     EAuto lisAuto[20];
+     EProp lisProp[T_CLIENTES];
+     EAuto lisAuto[T_AUTOS];
 
+     inicilizar_Prop(lisProp);
+     inicializar_Autos(lisAuto);
+     //HardCode_Prop(lisProp);
+     //HardCode_Autos(lisAuto);
      char dato[100];
      char opcion;
      char seguir='s';
@@ -14,6 +18,7 @@ int main()
 
      while(seguir=='s')
     {
+        system("cls");
         printf("\n\tSISTEMA DE ESTACIONAMIENTO\n");
         printf("\t==========================\n\n");
         printf("\tINGRESE OPCION DESEADA\n\n");
@@ -26,7 +31,7 @@ int main()
         printf("7-\t RECAUDACION POR MARCA\n");
         printf("8-\t LISTAR AUTOS DE UN PROPIETARIO\n");
         printf("9-\t LISTAR DATOS DE PROPIETARIO QUE TENGA AUDI\n");
-        printf("10-\t LISTARDO DE AUTOS ESTACIONADOS ORDENADOS POR PATENTE\n");
+        printf("10-\t LISTADO DE AUTOS ESTACIONADOS ORDENADOS POR PATENTE\n");
         printf("11-\t SALIR\n");
 
 
@@ -42,50 +47,52 @@ int main()
                 // ALTA DE PROPIETARIO
                 break;
             case 2:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{Mod_Tarj_Cre (lisProp);}
+                if (!Ver_BaseCliente_Vacio(lisProp,T_CLIENTES)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{Mod_Tarj_Cre(lisProp);}
 
                 // MODIFICACION DE PROPIETARI (TARJ DE CREDITO)
                 break;
             case 3:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                if (!Ver_BaseCliente_Vacio(lisProp,T_CLIENTES)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
                 else{BajaProp (lisProp,lisAuto);}
 
                 // BAJA DE PROPIETARIO
                 break;
             case 4:
-                IngresoAuto(lisAuto);
+                if (!Ver_BaseCliente_Vacio(lisProp,T_CLIENTES)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{IngresoAuto(lisAuto,lisProp);}
+
 
                 // INGRESO DE AUTOMOVIL
                 break;
             case 5:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{}
+                if (!Ver_Estacionamiento_Vacio(lisAuto,T_AUTOS)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{EgresoAuto(lisAuto,lisProp);}
                 // EGRESO DE AUTOMOVIL
                 break;
             case 6:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{}
+                if (!Ver_Estacionamiento_Vacio(lisAuto,T_AUTOS)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{RecaudacionTotal(lisAuto);}
                 //RECAUDACION TOTAL
                 break;
             case 7:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{}
+                if (!Ver_Estacionamiento_Vacio(lisAuto,T_AUTOS)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{RecaudacionTotal_Marca(lisAuto);}
                 //RECAUDACION POR MARCA
                 break;
             case 8:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{}
+                if (!Ver_BaseCliente_Vacio(lisProp,T_CLIENTES)){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{Autosde1id(lisProp,lisAuto);}
                 //LISTAR AUTOS DE UN PROPIETARIO
                 break;
             case 9:
-                if (){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{}
+                if ((!Ver_Estacionamiento_Vacio(lisAuto,T_AUTOS)) && (!Ver_BaseCliente_Vacio(lisProp,T_CLIENTES))) {printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{ListarPropAudi(lisProp,lisAuto);}
                 //LISTAR DATOS DE PROPIETARIO QUE TENGA AUDI
                 break;
             case 10:
-                if (FlagCargaA==0){printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
-                else{}
+                if ((!Ver_Estacionamiento_Vacio(lisAuto,T_AUTOS)) && (!Ver_BaseCliente_Vacio(lisProp,T_CLIENTES))) {printf("\n\tDebe realizar la carga de datos en primer lugar. La base de datos del sistema esta vacia.\n\n"); system("pause");}
+                else{ListadoOrdenadoAutos(lisProp,lisAuto);}
                 //LISTARDO DE AUTOS ESTACIONADOS ORDENADOS POR PATENTE
                 break;
             case 11:
