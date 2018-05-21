@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1525703997 source:c:\test\parcial\funciones.c
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	"funciones.h"
+	<string.h>
+
+1525702753 c:\test\parcial\funciones.h
+
+1525703684 source:c:\test\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1525704304 source:c:\users\administrador\desktop\1-parcial\funciones.c
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	"funciones.h"
+	<string.h>
+
+1525704304 c:\users\administrador\desktop\1-parcial\funciones.h
+
+1526255238 source:c:\users\administrador\desktop\1-parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1526674159 source:c:\users\abrinoli_mecon\dropbox\facultad - estudio\inicio tecnicatura superior en programación\laboratoio de programacion 1\prog_y_lab_i\parcial\funciones.c
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	"funciones.h"
+	<string.h>
+
+1526615125 c:\users\abrinoli_mecon\dropbox\facultad - estudio\inicio tecnicatura superior en programación\laboratoio de programacion 1\prog_y_lab_i\parcial\funciones.h
+
+1526674056 source:c:\users\abrinoli_mecon\dropbox\facultad - estudio\inicio tecnicatura superior en programación\laboratoio de programacion 1\prog_y_lab_i\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1526879025 source:c:\users\administrador\dropbox\facultad - estudio\inicio tecnicatura superior en programación\laboratoio de programacion 1\prog_y_lab_i\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1526877974 c:\users\administrador\dropbox\facultad - estudio\inicio tecnicatura superior en programación\laboratoio de programacion 1\prog_y_lab_i\parcial\funciones.h
+
+1526879229 source:c:\users\administrador\dropbox\facultad - estudio\inicio tecnicatura superior en programación\laboratoio de programacion 1\prog_y_lab_i\parcial\funciones.c
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	<ctype.h>
+	"funciones.h"
+	<string.h>
+
+1526910180 source:c:\test\parcial\parcial\funciones.c
+	<stdio.h>
+	<conio.h>
+	<time.h>
+	<ctype.h>
+	"funciones.h"
+	<string.h>
+
+1526908120 c:\test\parcial\parcial\funciones.h
+
+1526904774 source:c:\test\parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
